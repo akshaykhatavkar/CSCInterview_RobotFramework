@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.6 on win32)" generated="20220406 12:39:25.593" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="D:\Interview\csc_rf\Tests">
+<suite id="s1-s1" name="GitHub" source="D:\Interview\csc_rf\Tests\GitHub.robot">
+<test id="s1-s1-t1" name="Search for a closed Repo">
+<kw name="Open Github" library="GitHub_App">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://github.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220406 12:39:25.983" level="INFO">Opening browser 'chrome' to base url 'https://github.com/'.</msg>
+<status status="PASS" starttime="20220406 12:39:25.983" endtime="20220406 12:39:31.276"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220406 12:39:31.277" endtime="20220406 12:39:31.549"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:25.983" endtime="20220406 12:39:31.549"/>
+</kw>
+<kw name="Search Repo" library="GitHub_App">
+<arg>react</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//input[@name='q']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:31.554" level="INFO">${xp} = //input[@name='q']</msg>
+<status status="PASS" starttime="20220406 12:39:31.553" endtime="20220406 12:39:31.554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:31.555" endtime="20220406 12:39:32.480"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>${search_Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:32.480" level="INFO">Typing text 'react' into text field '//input[@name='q']'.</msg>
+<status status="PASS" starttime="20220406 12:39:32.480" endtime="20220406 12:39:32.605"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220406 12:39:32.605" level="INFO">Sending key(s) ('RETURN',) to //input[@name='q'] element.</msg>
+<msg timestamp="20220406 12:39:32.989" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220406 12:39:32.989" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220406 12:39:32.605" endtime="20220406 12:39:34.279"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:31.552" endtime="20220406 12:39:34.280"/>
+</kw>
+<kw name="Click on Advanced Search" library="GitHub_App">
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//a[text()='Advanced search']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:34.282" level="INFO">${xp} = //a[text()='Advanced search']</msg>
+<status status="PASS" starttime="20220406 12:39:34.281" endtime="20220406 12:39:34.282"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:34.282" endtime="20220406 12:39:34.330"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:34.331" level="INFO">Clicking element '//a[text()='Advanced search']'.</msg>
+<status status="PASS" starttime="20220406 12:39:34.331" endtime="20220406 12:39:35.078"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:34.280" endtime="20220406 12:39:35.078"/>
+</kw>
+<kw name="Select Language" library="GitHub_App">
+<arg>JavaScript</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//select[@id="search_language"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:35.080" level="INFO">${xp} = //select[@id="search_language"]</msg>
+<status status="PASS" starttime="20220406 12:39:35.079" endtime="20220406 12:39:35.080"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:35.080" endtime="20220406 12:39:35.105"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220406 12:39:35.106" level="INFO">Selecting options from selection list '//select[@id="search_language"]' by label JavaScript.</msg>
+<status status="PASS" starttime="20220406 12:39:35.105" endtime="20220406 12:39:35.178"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:35.079" endtime="20220406 12:39:35.178"/>
+</kw>
+<kw name="Select State" library="GitHub_App">
+<arg>closed</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//select[@id="search_state"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:35.180" level="INFO">${xp} = //select[@id="search_state"]</msg>
+<status status="PASS" starttime="20220406 12:39:35.180" endtime="20220406 12:39:35.180"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:35.180" endtime="20220406 12:39:35.205"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>${state}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220406 12:39:35.206" level="INFO">Selecting options from selection list '//select[@id="search_state"]' by label closed.</msg>
+<status status="PASS" starttime="20220406 12:39:35.205" endtime="20220406 12:39:35.275"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:35.179" endtime="20220406 12:39:35.275"/>
+</kw>
+<kw name="Enter Stars" library="GitHub_App">
+<arg>&gt;45</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//input[@id="search_stars"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:35.277" level="INFO">${xp} = //input[@id="search_stars"]</msg>
+<status status="PASS" starttime="20220406 12:39:35.277" endtime="20220406 12:39:35.277"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:35.278" endtime="20220406 12:39:35.305"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>${stars}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:35.305" level="INFO">Typing text '&gt;45' into text field '//input[@id="search_stars"]'.</msg>
+<status status="PASS" starttime="20220406 12:39:35.305" endtime="20220406 12:39:35.405"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:35.276" endtime="20220406 12:39:35.405"/>
+</kw>
+<kw name="Enter Followers" library="GitHub_App">
+<arg>&gt;50</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//input[@id="search_followers"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:35.407" level="INFO">${xp} = //input[@id="search_followers"]</msg>
+<status status="PASS" starttime="20220406 12:39:35.406" endtime="20220406 12:39:35.407"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:35.407" endtime="20220406 12:39:35.432"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>${followers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:35.433" level="INFO">Typing text '&gt;50' into text field '//input[@id="search_followers"]'.</msg>
+<status status="PASS" starttime="20220406 12:39:35.432" endtime="20220406 12:39:35.536"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:35.406" endtime="20220406 12:39:35.536"/>
+</kw>
+<kw name="Select License" library="GitHub_App">
+<arg>Boost Software License 1.0</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//select[@id="search_license"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:35.539" level="INFO">${xp} = //select[@id="search_license"]</msg>
+<status status="PASS" starttime="20220406 12:39:35.538" endtime="20220406 12:39:35.539"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:35.539" endtime="20220406 12:39:35.565"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>${license}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220406 12:39:35.566" level="INFO">Selecting options from selection list '//select[@id="search_license"]' by label Boost Software License 1.0.</msg>
+<status status="PASS" starttime="20220406 12:39:35.566" endtime="20220406 12:39:35.636"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:35.537" endtime="20220406 12:39:35.636"/>
+</kw>
+<kw name="Search on Advanced Search Page" library="GitHub_App">
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//button[@type='submit']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:35.639" level="INFO">${xp} = //button[@type='submit']</msg>
+<status status="PASS" starttime="20220406 12:39:35.639" endtime="20220406 12:39:35.639"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:35.639" endtime="20220406 12:39:35.664"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:35.665" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220406 12:39:35.664" endtime="20220406 12:39:36.167"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220406 12:39:39.167" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220406 12:39:36.167" endtime="20220406 12:39:39.167"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:35.637" endtime="20220406 12:39:39.167"/>
+</kw>
+<kw name="Get Total Repos under Search Result Page" library="GitHub_App">
+<var>${total_repo}</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//a[@class='v-align-middle']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:39.167" level="INFO">${xp} = //a[@class='v-align-middle']</msg>
+<status status="PASS" starttime="20220406 12:39:39.167" endtime="20220406 12:39:39.167"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:39.167" endtime="20220406 12:39:39.182"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${total_repos}</var>
+<arg>${xp}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220406 12:39:39.198" level="INFO">${total_repos} = 1</msg>
+<status status="PASS" starttime="20220406 12:39:39.182" endtime="20220406 12:39:39.198"/>
+</kw>
+<msg timestamp="20220406 12:39:39.198" level="INFO">${total_repo} = 1</msg>
+<status status="PASS" starttime="20220406 12:39:39.167" endtime="20220406 12:39:39.198"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${total_repo}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20220406 12:39:39.198" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220406 12:39:39.198" endtime="20220406 12:39:39.198"/>
+</kw>
+<kw name="Get Repo Name at search location" library="GitHub_App">
+<var>${repo_name}</var>
+<arg>0</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//a[@class='v-align-middle']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:39.198" level="INFO">${xp} = //a[@class='v-align-middle']</msg>
+<status status="PASS" starttime="20220406 12:39:39.198" endtime="20220406 12:39:39.198"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:39.198" endtime="20220406 12:39:39.214"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${xp}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220406 12:39:39.229" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="60370232fa0694e74d0de5b70a8a3851", element="3b8da861-3629-4f5d-9861-2a22977420d5")&gt;]</msg>
+<status status="PASS" starttime="20220406 12:39:39.214" endtime="20220406 12:39:39.229"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${repo_name}</var>
+<arg>${elements[${location}]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:39.245" level="INFO">${repo_name} = mvoloskov/decider</msg>
+<status status="PASS" starttime="20220406 12:39:39.229" endtime="20220406 12:39:39.245"/>
+</kw>
+<msg timestamp="20220406 12:39:39.245" level="INFO">${repo_name} = mvoloskov/decider</msg>
+<status status="PASS" starttime="20220406 12:39:39.198" endtime="20220406 12:39:39.245"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${repo_name}</arg>
+<arg>mvoloskov/decider</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220406 12:39:39.245" endtime="20220406 12:39:39.245"/>
+</kw>
+<kw name="Navigate to specific Repo on Search Page" library="GitHub_App">
+<arg>0</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//a[@class='v-align-middle']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:39.245" level="INFO">${xp} = //a[@class='v-align-middle']</msg>
+<status status="PASS" starttime="20220406 12:39:39.245" endtime="20220406 12:39:39.245"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:39.245" endtime="20220406 12:39:39.276"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${xp}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220406 12:39:39.276" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="60370232fa0694e74d0de5b70a8a3851", element="3b8da861-3629-4f5d-9861-2a22977420d5")&gt;]</msg>
+<status status="PASS" starttime="20220406 12:39:39.276" endtime="20220406 12:39:39.276"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elements[${location}]}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:39.292" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60370232fa0694e74d0de5b70a8a3851", element="3b8da861-3629-4f5d-9861-2a22977420d5")&gt;'.</msg>
+<status status="PASS" starttime="20220406 12:39:39.276" endtime="20220406 12:39:41.430"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:39.245" endtime="20220406 12:39:41.431"/>
+</kw>
+<kw name="Get number of Chars of ReadMe" library="GitHub_App">
+<var>${readMe}</var>
+<arg>300</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xp}</var>
+<arg>//div[@data-target="readme-toc.content"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:41.433" level="INFO">${xp} = //div[@data-target="readme-toc.content"]</msg>
+<status status="PASS" starttime="20220406 12:39:41.433" endtime="20220406 12:39:41.433"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xp}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:39:41.434" endtime="20220406 12:39:41.491"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${xp}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:39:41.613" level="INFO">${text} = 🤔 Decider
+Apply CSS to React components conditionally, like a boss.
+className={ decide(styles, {
+    header: true,
+    mobile: props.isMobile,
+    narrow: parseInt(props.width) &lt; 400,
+    hidden: (pro...</msg>
+<status status="PASS" starttime="20220406 12:39:41.492" endtime="20220406 12:39:41.613"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${intended_text}</var>
+<arg>${text[0:${no_of_chars}]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220406 12:39:41.614" level="INFO">${intended_text} = 🤔 Decider
+Apply CSS to React components conditionally, like a boss.
+className={ decide(styles, {
+    header: true,
+    mobile: props.isMobile,
+    narrow: parseInt(props.width) &lt; 400,
+    hidden: (pro...</msg>
+<status status="PASS" starttime="20220406 12:39:41.613" endtime="20220406 12:39:41.614"/>
+</kw>
+<msg timestamp="20220406 12:39:41.615" level="INFO">${readMe} = 🤔 Decider
+Apply CSS to React components conditionally, like a boss.
+className={ decide(styles, {
+    header: true,
+    mobile: props.isMobile,
+    narrow: parseInt(props.width) &lt; 400,
+    hidden: (pro...</msg>
+<status status="PASS" starttime="20220406 12:39:41.432" endtime="20220406 12:39:41.615"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\\n${readMe}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220406 12:39:41.615" endtime="20220406 12:39:41.616"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${readMe}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220406 12:39:41.616" level="INFO">🤔 Decider
+Apply CSS to React components conditionally, like a boss.
+className={ decide(styles, {
+    header: true,
+    mobile: props.isMobile,
+    narrow: parseInt(props.width) &lt; 400,
+    hidden: (props.hidden !== "false" &amp;&amp; Boolean(props.hidden)),
+    fixed: parseInt(props.width) &gt;= 400 || !props.i</msg>
+<status status="PASS" starttime="20220406 12:39:41.616" endtime="20220406 12:39:41.616"/>
+</kw>
+<kw name="Test_Teardown" library="GitHub_App" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220406 12:39:41.618" endtime="20220406 12:39:44.024"/>
+</kw>
+<status status="PASS" starttime="20220406 12:39:41.617" endtime="20220406 12:39:44.024"/>
+</kw>
+<tag>github</tag>
+<status status="PASS" starttime="20220406 12:39:25.983" endtime="20220406 12:39:44.024"/>
+</test>
+<status status="PASS" starttime="20220406 12:39:25.639" endtime="20220406 12:39:44.024"/>
+</suite>
+<status status="PASS" starttime="20220406 12:39:25.593" endtime="20220406 12:39:44.024"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">github</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="GitHub">Tests.GitHub</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
